@@ -1,0 +1,20 @@
+{
+  "productId": 10001, 
+  "fullName": "Product Name", 
+  "images": [
+    {
+      "pic_url": "http://www.image.com/pic1.png", 
+      "width": 800, 
+      "height": 600
+    }, 
+    {
+      "pic_url": "http://www.image.com/pic2.png", 
+      "width": 320, 
+      "height": 480
+    }
+  ], 
+  "extenInfo": {
+    "extenDescription": "Product description", 
+    "otherNumber": 1048576
+  }
+}
