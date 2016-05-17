@@ -65,6 +65,9 @@ static NSArray * MUPrimitiveTypes() {
                             if (code[1] == '\0') {
                                 muProperty.typeEncoding = @"@";
                             }
+                            else if (code[2] == '\0') {
+                                muProperty.typeEncoding = @"@?";
+                            }
                             else {
                                 NSString *typeString = @(attrs[j].value);
                                 // get class @"NSObject<>" -> NSObject<>
