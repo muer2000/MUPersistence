@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MUPersistence"
-  s.version      = "0.9.2"
+  s.version      = "0.9.3"
   s.license      = "MIT"
   s.summary      = "JSON and model transformation framework."
   s.homepage     = "https://github.com/muer2000/MUPersistence"

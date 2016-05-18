@@ -232,11 +232,33 @@ static NSMutableDictionary *kSharedPropertyInfo = nil;
 {
     NSDictionary *propertyInfo = [self p_propertyInfo];
     [propertyInfo enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        MUPersistentClassProperty *property = obj;
         NSString *propertyName = key;
+        // ignore null value
+        id propertyValue = [self valueForKey:propertyName];
+        if (propertyValue == nil || propertyValue == [NSNull null]) {
+            return;
+        }
+        // ignore property
+        if ([self p_shouldIgnoreProperty:property]) {
+            return;
+        }
+        
         id oldValue = [self valueForKey:propertyName];
         id newValue = block(propertyName, oldValue);
-        if (oldValue != newValue) {
-            [self setValue:newValue forKey:propertyName];
+        if (oldValue == newValue) {
+            return;
+        }
+        
+        if (property.className ||
+            (property.isPrimitiveType && ([newValue isKindOfClass:[NSNumber class]] ||
+                                         [newValue isKindOfClass:[NSString class]]))) {
+            @try {
+                [self setValue:newValue forKey:propertyName];
+            }
+            @catch (NSException *exception) {
+                NSLog(@"exception: %@", exception);
+            }
         }
     }];
 }

@@ -113,7 +113,7 @@ static NSString * const kGetGithubRepositoriesURL = @"https://api.github.com/rep
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            [self transformByInheritance];
+            [self transformByCategory];
         }
         else {
             [self transformByInheritance];
