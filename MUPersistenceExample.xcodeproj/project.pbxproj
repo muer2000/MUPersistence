@@ -33,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160E4EAC1CEDA9C500D69D38 /* MUPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUPersistence.h; sourceTree = "<group>"; };
 		E14E3A821CBB58CC00C0C700 /* MUPersistenceExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MUPersistenceExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14E3A861CBB58CC00C0C700 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E14E3A881CBB58CC00C0C700 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		E14E3A9C1CBB59A400C0C700 /* MUPersistence */ = {
 			isa = PBXGroup;
 			children = (
+				160E4EAC1CEDA9C500D69D38 /* MUPersistence.h */,
 				E14E3AA31CBB59A400C0C700 /* NSObject+MUPersistence.h */,
 				E14E3AA41CBB59A400C0C700 /* NSObject+MUPersistence.m */,
 				E14E3A9D1CBB59A400C0C700 /* MUPersistent.h */,
